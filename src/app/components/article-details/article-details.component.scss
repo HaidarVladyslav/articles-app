@@ -1,0 +1,39 @@
+.container {
+    margin-top: 150px;
+}
+
+.article {
+    padding: 25px 50px;
+    filter: drop-shadow(0px 4px 4px rgba(170, 235, 20, 0.25)) !important;
+
+    &-img {
+        width: 100%;
+        height: 25%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &-back {
+        color: #fff;
+        font-style: oblique;
+        margin: 25px;
+    }
+
+    &-loader {
+        position: fixed;
+        color: #fff;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+        z-index: 99;
+    }
+}

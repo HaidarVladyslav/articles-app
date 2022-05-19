@@ -1,0 +1,20 @@
+<img *ngIf="article?.imageUrl" class="article-img" [src]="article?.imageUrl" alt="img">
+<div *ngIf="article; else loader" class="container">
+    <mat-card class="article">
+        <mat-card-title class="article-title">{{ article.title }}</mat-card-title>
+        <mat-card-content>
+            <p>
+                {{ article.summary}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+    <button [routerLink]="['/home']" mat-stroked-button class="article-back">
+        <mat-icon>keyboard_backspace</mat-icon>
+        Back to homepage
+    </button>
+</div>
+<ng-template #loader>
+    <p class="article-loader">
+        Loading...
+    </p>
+</ng-template>

@@ -1,0 +1,51 @@
+.articles {
+    display: grid;
+    max-width: fit-content;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 45px;
+    padding: 0 45px;
+
+    &-info {
+        padding: 0 45px;
+        margin-bottom: 30px;
+    }
+
+    &-empty {
+        grid-column: 2;
+    }
+}
+
+.home {
+    &-menu {
+        margin: 45px 0 0 45px;
+        width: 300px;
+    }
+
+    &-search {
+        margin-left: 10%;
+        color: #fff;
+
+        &__icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #fff;
+        }
+    }
+}
+
+.mat-form-field {
+    width: 400px;
+
+    &-appearance-fill {
+        filter: drop-shadow(0px 4px 4px rgba(170, 235, 20, 0.25)) !important;
+    }
+}
+.mat-form-field-label-wrapper {
+    color: red !important;
+}
+
+.highlight {
+    color: red;
+}

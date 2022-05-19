@@ -1,0 +1,19 @@
+<mat-card class="card">
+    <img class="card-img" mat-card-image [src]="article.imageUrl" alt="img">
+    <mat-card-header>
+        <mat-card-subtitle class="card-date">
+            <mat-icon class="card-date__icon">date_range</mat-icon>
+            {{ article.updatedAt | date:"longDate" }}
+        </mat-card-subtitle>
+        <mat-card-title [innerHTML]="article.title | shortener | highlight:search"></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p [innerHTML]="article.summary | shortener | highlight:search">
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button class="card-details" [routerLink]="['/articles', article.id]" mat-button>Read more
+            <mat-icon>arrow_right_alt</mat-icon>
+        </button>
+    </mat-card-actions>
+</mat-card>

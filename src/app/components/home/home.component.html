@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="home-menu">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-icon *ngIf="search?.length > 0" class="home-search__icon">search</mat-icon>
+            <mat-label>Filter by keywords</mat-label>
+            <input (input)="isSearchCompleted($event)" class="home-search" matInput [(ngModel)]="search">
+          </mat-form-field> 
+    </div>
+    <div class="articles-info">
+        <h4>Results: {{ searchedArticles.length }}</h4>
+        <hr>
+    </div>
+    <div class="articles">
+        <app-article *ngFor="let article of searchedArticles" 
+        [article]="article"
+        [search]="search"
+        ></app-article>
+        <h2 class="articles-empty" *ngIf="!searchedArticles.length">No Articles Found</h2>
+    </div>
+</div>
